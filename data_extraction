@@ -1,0 +1,52 @@
+# Loading necessary packages
+import json
+import pandas as pd
+import random as rnd
+from ydata_profiling import ProfileReport
+
+# Defining file path
+file_path = r"C:\Users\Sunny_Masked_Filepath\yelp_academic_dataset_review.json"
+
+# Quickly counting the number of lines in the json file
+with open(file_path, 'r', encoding='utf-8') as file:
+    line_count = sum(1 for _ in file)
+
+datasize = line_count
+samplesize = datasize // 20 # Taking a 5% sample of the data
+
+print(f"Total lines: {line_count}")
+print(f"Sample size (5%): {samplesize}")
+
+# Randomly sampling the data
+rnd.seed(2025) # Setting seed for reproducibility
+random_numbers = rnd.sample(range(1, datasize), samplesize) # Randomly selecting numbers between 1 and 6,990,280 (unique numbers only)
+random_index = set(random_numbers) # Converting list to set for faster lookup
+
+# Creating file object and loading data into it
+sample_data = []
+with open(file_path, 'r', encoding='utf-8') as file:
+    for i, line in enumerate(file):
+        if i in random_index:  # Limit to first 5% of lines for sample
+            sample_data.append(json.loads(line))
+
+# Converting list of dictionaries to DataFrame
+sample_data = pd.DataFrame(sample_data)
+
+# Displaying summary of the sample data
+sample_data.info()
+
+# High level statistics of the sample data
+sample_data.describe()
+
+# Displaying first few rows of the sample data
+sample_data.head()
+
+# Reducing features to only those needed for analysis
+sample_data.drop(['useful', 'funny', 'cool', 'date'], axis=1, inplace=True)
+
+# Saving the sample data to a CSV file
+sample_data.to_csv(r"C:\Users\Sunny_Masked_Filepath\yelp_review_sample_data.csv", index=True)
+
+# Utilizing the ydata_profiling package to generate a report
+profile = ProfileReport(sample_data, title="Yelp Review Data Profiling Report", explorative=True)
+profile.to_file("yelp_review_data_profiling_report.html")
