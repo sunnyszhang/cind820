@@ -19,5 +19,8 @@ The purpose of this GitHub repository is to store all notebooks utilized for the
 ### 2. CIND 820 - Project Version 2.1 - Data Analysis Section
 - This notebook aims to analyze and assess trends and patterns observed within the cleaned dataset.
 - It deploys descriptive statistics on the overall cleaned dataset to get a gauge of the overall distribution and central tendencies of the dataset as a whole
-- Then for the exploratory data analysis portion, it further disects the distributions using boxplots and histograms but at a grouped star-rating level. This helped reveal patterns unique to each star-rating group
-- The notebook includes various visualizations for ease of interpretation.
+- Then for the exploratory data analysis portion, it further disects the distributions using barplots, boxplots, and histograms at a grouped star-rating level. This helps reveal patterns unique to each star-rating group.
+
+## 3. CIND 820 - Project Version 2.0 - Model Evaluation Section
+- This notebook focuses on model training and evaluation based on the sentiment score and BoW matrix generated from the *Data Preparation Section* section.
+- The models used include Multinomial Logistic Regression, Naive Bayes, and Regression-based Support Vector Regression (SVR). 
