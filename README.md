@@ -23,7 +23,7 @@ The purpose of this GitHub repository is to store all notebooks utilized for the
 - Then for the exploratory data analysis portion, it further disects the distributions using barplots, boxplots, and histograms at a grouped star-rating level. This helps reveal patterns unique to each star-rating group.
 - [Link to Notebook](https://github.com/sunnyszhang/cind820/blob/main/CIND%20820%20-%20Project%20Version%202.2%20-%20Data%20Analysis%20Section.ipynb)
 
-### 3. CIND 820 - Project Version 2.1 - Model Evaluation Section
+### 3. CIND 820 - Project Version 2.7 - Model Evaluation Section
 - This notebook focuses on model training and evaluation based on the sentiment score and BoW matrix generated from the *Data Preparation Section* section.
 - The models used include Multinomial Logistic Regression, Naive Bayes, and Regression-based Support Vector Regression (SVR).
-- [Link to Notebook](https://github.com/sunnyszhang/cind820/blob/main/CIND%20820%20-%20Project%20Version%202.1%20-%20Model%20Evaluation%20Section.ipynb)
+- [Link to Notebook]([https://github.com/sunnyszhang/cind820/blob/main/CIND%20820%20-%20Project%20Version%202.1%20-%20Model%20Evaluation%20Section.ipynb](https://github.com/sunnyszhang/cind820/blob/main/CIND%20820%20-%20Project%20Version%202.7%20-%20Model%20Evaluation%20Section.ipynb))
